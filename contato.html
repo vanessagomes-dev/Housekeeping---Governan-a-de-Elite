@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - Governança em Navios</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+
+    <!-- 🛠 Cabeçalho com Menu -->
+    <header>
+        <div class="menu-btn">☰</div> <!-- Ícone do menu -->
+        <nav class="menu">
+            <a href="index.html">Home</a>
+            <a href="sobre.html">Sobre</a>
+            <a href="cursos.html">Cursos</a>
+            <a href="contato.html">Contato</a>
+        </nav>
+    </header>
+
+    <section class="contato">
+        <h2>Entre em Contato</h2>
+        
+        <form action="enviar.php" method="POST">
+            <input type="text" name="nome" placeholder="Seu Nome" required>
+            <input type="email" name="email" placeholder="Seu Email" required>
+            <textarea name="mensagem" placeholder="Sua Mensagem" required></textarea>
+            <button type="submit" class="btn">Enviar</button>
+        </form>
+
+        <div class="social-links">
+            <a href="https://instagram.com/seuinsta">Instagram</a>
+            <a href="https://linkedin.com/seulinkedin">LinkedIn</a>
+        </div>
+    </section>
+
+</body>
+</html>

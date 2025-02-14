@@ -42,19 +42,21 @@ document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener("scroll", scrollAnimation);
     scrollAnimation();
 
-    // ✅ Validação de Formulário na Página de Contato
+    // ✅ Validação de Formulário na Página de Contato + Limpar Campos Após Envio
     let form = document.querySelector("form");
     if (form) {
         form.addEventListener("submit", function (event) {
-            let nome = document.querySelector("input[name='nome']").value;
-            let email = document.querySelector("input[name='email']").value;
-            let mensagem = document.querySelector("textarea[name='mensagem']").value;
+            event.preventDefault(); // Evita o envio padrão para controle
 
-            if (nome.trim() === "" || email.trim() === "" || mensagem.trim() === "") {
+            let nome = document.querySelector("input[name='nome']").value.trim();
+            let email = document.querySelector("input[name='email']").value.trim();
+            let mensagem = document.querySelector("textarea[name='mensagem']").value.trim();
+
+            if (nome === "" || email === "" || mensagem === "") {
                 alert("Por favor, preencha todos os campos.");
-                event.preventDefault();
             } else {
                 alert("Mensagem enviada com sucesso!");
+                form.reset(); // Limpa os campos do formulário
             }
         });
     }

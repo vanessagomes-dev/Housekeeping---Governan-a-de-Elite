@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,11 +8,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="/styles/style.css">
 </head>
-<body>
 
-    <!-- 🛠 Cabeçalho com Menu -->
+<body>
     <header>
-        <div class="menu-btn">☰</div> <!-- Botão do menu -->
+        <div class="menu-btn">☰</div>
         <nav class="menu">
             <a href="index.html">Home</a>
             <a href="sobre.html">Sobre</a>
@@ -20,24 +20,73 @@
         </nav>
     </header>
 
-    <!-- 🎥 Seção do Curso -->
-    <section class="cursos">
-        <h2>O Curso Completo de Governança</h2>
-        <p>Aprenda os fundamentos para crescer na hotelaria marítima.</p>
-        
-        <div class="video-section">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/CODIGO_DO_VIDEO" frameborder="0" allowfullscreen></iframe>
+    <section class="clip-text-video">
+        <video autoplay loop muted playsinline preload="auto" width="100%">
+          <source
+            src="https://www.jonathandempsey.dev/wp-content/uploads/2020/05/waves.mp4"
+            type="video/mp4"
+          />
+        </video>
+        <div class="clip-text-video__text">
+          <p>TRANSFORME SUA </p>
+          <p>CARREIRA NO MAR!</p>
         </div>
 
-        <div class="curso-info">
-            <img src="assets/images/curso.jpg" alt="Curso de Governança">
-            <h3>Investimento: R$ 497,00</h3>
-            <a href="pagamento.html" class="btn">Comprar Agora</a>
+        
+      </section>
+
+      <section class="aprendizado fade-in">
+        <div class="col-1">
+            <h2>O que você vai aprender?</h2>
+            <ul>
+                <li>✅ Fundamentos da governança hoteleira a bordo</li>
+                <li>✅ Procedimentos operacionais para diferentes cargos</li>
+                <li>✅ Gestão de equipes e liderança eficiente</li>
+                <li>✅ Otimização de rotinas e produtividade</li>
+                <li>✅ Padrões de limpeza e organização exigidos pela indústria</li>
+                <li>✅ Excelência no atendimento ao hóspede</li>
+                <li>✅ Como se preparar para promoções e crescimento na carreira</li>
+            </ul>
+        </div> <!--fim coluna 1-->
+
+        <div class="col-2">
+            <h2>🎁 Bônus Exclusivos!</h2>
+            <ul>
+                <li>📌<b> Manual do Tripulante –</b> Guia completo para ingressar na indústria sem erros</li>
+                <li>📌<b> Mentoria Exclusiva –</b> Sessões personalizadas para tirar dúvidas e acelerar sua evolução
+                </li>
+            </ul>
+        </div> <!--fim coluna 2-->
+    </section>
+   
+
+    <section class="curso-info fade-in">
+        <div class="card">
+            <h2>Investimento: R$ 497,00</h2>
+            <p>Suporte e materiais exclusivos.</p><br>
+            <p><span>Somente 10 vagas disponíveis!</span></p>
+            <h3>Inscreva-se antes que acabem!</h3>
+            <a href="pagamento.html" class="btn">Quero Garantir Minha Vaga</a>
+
         </div>
     </section>
 
-    <!-- Javascript -->
-    <script src="scripts/script.js"></script>
+    <section class="video-section fade-in">
+        <h2>Lives</h2>
+        <div class="instagram-videos">
+            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DFl1HDotTOu/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14"></blockquote>
+    
+            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DF_cQsdMOc1/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14"></blockquote>
+        </div>
+        <script async src="//www.instagram.com/embed.js"></script>
+    </section>
+    
+    <section class="video-section fade-in">
+        <h2>Vídeos do YouTube</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/CODIGO_DO_VIDEO" frameborder="0"
+            allowfullscreen></iframe>
+    </section>
 
+    <script defer src="scripts/script.js"></script>
 </body>
 </html>

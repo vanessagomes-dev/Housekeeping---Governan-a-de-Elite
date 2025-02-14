@@ -21,20 +21,32 @@
     </header>
 
     <section class="contato">
-        <h2>Entre em Contato</h2>
-        
-        <form action="enviar.php" method="POST">
+        <!-- 📞 Parte Esquerda: Informações e Redes Sociais -->
+        <div class="contato-info">
+            <h2>Fale Conosco!</h2>
+            <a href="https://api.whatsapp.com/send?phone=13978013572" target="_blank" class="whatsapp-btn">
+                <i class="fa-brands fa-whatsapp"></i> Fale pelo WhatsApp
+            </a>
+            <div class="social-icons">
+                <a href="https://instagram.com/seuinsta" aria-label="link do instagram" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://tiktok.com/@seutiktok" aria-label="link do tiktok" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+                        <a href="https://youtube.com/seuyoutube" aria-label="link do youtube" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+    
+        <!-- ✉️ Parte Direita: Formulário de Contato -->
+        <form action="https://formsubmit.co/carolinabeckford83@gmail.com" method="POST">
             <input type="text" name="nome" placeholder="Seu Nome" required>
             <input type="email" name="email" placeholder="Seu Email" required>
             <textarea name="mensagem" placeholder="Sua Mensagem" required></textarea>
             <button type="submit" class="btn">Enviar</button>
+        
+            <!-- Configurações ocultas -->
+            <input type="hidden" name="_next" value="https://seusite.com/obrigado.html">
+            <input type="hidden" name="_captcha" value="false">
         </form>
-
-        <div class="social-links">
-            <a href="https://instagram.com/seuinsta">Instagram</a>
-            <a href="https://linkedin.com/seulinkedin">LinkedIn</a>
-        </div>
-    </section>
+        
+    
     
     <script src="scripts/script.js"></script>
 

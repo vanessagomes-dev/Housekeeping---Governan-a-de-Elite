@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
+    font-family: helvetica;
 }
 
 body {
@@ -11,7 +11,9 @@ body {
     background-color: #f4f4f4;
     color: #333;
 }
-
+html {
+    display: block;
+}
 /* Cabeçalho e Menu */
 header {
     position: fixed; /* Mantém o menu fixo no topo */
@@ -135,13 +137,13 @@ header {
 }
 
 .sobre-text h2 {
-    font-size: 28px;
+    font-size: 30px;
     color: #1a1a1a;
     margin-bottom: 15px;
 }
 
 .sobre-text p {
-    font-size: 18px;
+    font-size: 20px;
     color: #555;
     line-height: 1.6;
 }
@@ -157,7 +159,8 @@ header {
 }
 
 .redes-sociais h3 {
-    margin-bottom: 10px; /* Espaçamento abaixo do título */
+    margin-bottom: 20px; /* Espaçamento abaixo do título */
+    font-size: 28px;
 }
 
 .social-icons {
@@ -167,7 +170,7 @@ header {
 }
 
 .social-icons a {
-    font-size: 24px; /* Tamanho dos ícones */
+    font-size: 28px; /* Tamanho dos ícones */
     color: #ff6600; 
     transition: transform 0.3s ease, color 0.3s ease;
 }
@@ -177,3 +180,333 @@ header {
     transform: scale(1.2); 
 }
 
+/*Cursos*/
+.aprendizado {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 50px 20px;
+    background: white;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
+    }
+    
+    .col-1, .col-2 {
+    flex: 1;
+    background: #ff6600;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    }
+    
+    .col-1:hover, .col-2:hover {
+    transform: scale(1.05);
+    }
+    
+    .col-1 ul, .col-2 ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    }
+    
+    .col-1 h2, .col-2 h2 {
+    text-align: center;
+    margin-bottom: 15px;
+    }
+    
+    @media (max-width: 768px) {
+    .aprendizado {
+    flex-direction: column;
+    }
+    }
+    
+    /* Cursos */ 
+    .cursos, .curso-info, .video-section {
+    text-align: center;
+    padding: 50px 20px;
+    background: white;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    iframe {
+    width: 100%;
+    max-width: 560px;
+    height: 315px;
+    margin-top: 20px;
+    }
+ 
+    .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+    
+    .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+    }
+    
+    li {
+    list-style: none;
+    text-align: justify;
+    }
+
+     /* Ajuste para separar o título das seções */
+     .clip-text-video {
+        margin-bottom: 100px; /* Aumentado para dar mais espaço entre as seções */
+        position: relative;
+        z-index: 1;
+      }
+      
+      video {
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        width: 100vw;
+        height: 30vh;
+        object-fit: cover;
+        overflow: hidden;
+        z-index: 1;
+      }
+      
+      .clip-text-video__text {
+        position: absolute;
+        top: 0;
+        width: 100vw;
+        height: 30vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        color: #fff;
+        overflow: hidden;
+        background: #000;
+        mix-blend-mode: multiply;
+        z-index: 2;
+      }
+      
+      .clip-text-video__text p {
+        font-size: 5vw;
+        line-height: 1;
+        font-weight: 900;
+        font-family: helvetica;
+        z-index: 2;
+       
+      }
+      .aprendizado {
+        position: relative;
+        z-index: 0;
+        padding: 130px 50px; /* Aumentado o padding superior */
+        background: white;
+        margin: 20px 20px; /* Aumentado o margin-top */
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .video-section h2 {
+        margin-bottom: 20px; /* Adiciona espaçamento abaixo do título */
+    }
+    
+    .instagram-videos {
+        display: flex;
+        flex-wrap: wrap; /* Permite que os vídeos se ajustem em telas menores */
+        gap: 20px; /* Adiciona espaçamento entre os vídeos */
+        justify-content: center; /* Centraliza os vídeos na tela */
+    }
+    
+    .instagram-media {
+        max-width: 48%; /* Define largura para que caibam dois vídeos lado a lado */
+        min-width: 320px; /* Evita que fiquem muito pequenos */
+    }
+/* Fundo chamativo */
+.curso-info {
+    background: linear-gradient(45deg, #ff5733, #ffcc33); /* Gradiente vibrante */
+    color: white; /* Texto branco para contraste */
+    text-align: center;
+    padding: 40px 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Efeito de piscar no título */
+.curso-info h2 {
+    font-size: 2rem;
+    color: #000;
+    font-weight: bold;
+    animation: piscar 1s infinite alternate;
+}
+.curso-info  h3 {
+    color: #000;
+}
+.curso-info p{
+    color: #000;
+}
+/* Efeito de pulo no botão */
+.curso-info .btn {
+    display: inline-block;
+    background: #ffcc00;
+    color: #000;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 15px 30px;
+    border-radius: 8px;
+    text-transform: uppercase;
+    text-decoration: none;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    transition: 0.3s;
+    animation: pulo 1s infinite ease-in-out;
+}
+
+/* Animação de piscar */
+@keyframes piscar {
+    0% { opacity: 1; }
+    100% { opacity: 0.4; }
+}
+
+/* Animação de pulo */
+@keyframes pulo {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Destacar o texto importante */
+.curso-info span {
+    color: #ff0;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+/* 🔹 Estilização da seção de contato */
+.contato {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* 🔹 Estilizando a parte esquerda (chamada + redes sociais) */
+.contato .contato-info {
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+}
+
+.contato .contato-info h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.contato .whatsapp-btn {
+    display: inline-block;
+    background: #25d366;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 12px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    animation: pulse 1.5s infinite;
+}
+
+/* Animação do botão do WhatsApp */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.contato .whatsapp-btn:hover {
+    background: #1ebe5f;
+}
+
+/* 🔹 Ícones das redes sociais */
+.contato .social-icons {
+    display: flex;
+    justify-content: center; /* Centraliza os ícones */
+    margin-top: 30px; /* Aumenta o espaçamento entre o botão e os ícones */
+    gap: 20px; /* Espaço entre os ícones */
+}
+
+
+.contato .social-icons a {
+    font-size: 2rem;
+    margin: 0 10px;
+    color: #555;
+    transition: 0.3s;
+}
+
+.contato .social-icons a:hover {
+    color: #000;
+}
+
+/* 🔹 Estilizando a parte direita (formulário) */
+.contato form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.contato form input,
+.contato form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.contato form textarea {
+    height: 120px;
+    resize: none;
+}
+
+.contato form .btn {
+    background: #ff5733;
+    color: white;
+    font-size: 1.2rem;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contato form .btn:hover {
+    background: #e14b2c;
+}
+
+/* 🔹 Responsividade */
+@media (max-width: 768px) {
+    .contato {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contato .contato-info {
+        margin-bottom: 20px;
+    }
+}
+  
+     

@@ -1,21 +1,29 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // 📌 Menu responsivo
-    const menuBtn = document.querySelector(".menu-btn");
-    const menu = document.querySelector(".menu");
+    console.log("JavaScript carregado com sucesso!"); // Log para testar se o script está sendo carregado
 
-    if (menuBtn && menu) {
-        menuBtn.addEventListener("click", function () {
-            menu.classList.toggle("active");
-        });
+    let menuBtn = document.querySelector(".menu-btn");
+    let menu = document.querySelector(".menu");
+    let menuLinks = document.querySelectorAll(".menu a");
+
+    if (!menuBtn || !menu) {
+        console.error("Erro: Elementos do menu não encontrados.");
+        return; // Sai da função se os elementos não existirem
     }
 
-    // 🎥 Verificar carregamento do vídeo
-    const video = document.querySelector(".bg-video");
-    if (video) {
-        video.addEventListener("error", function () {
-            console.error("Erro ao carregar o vídeo de fundo.");
+    console.log("Elementos do menu encontrados!"); // Confirmação no console
+
+    menuBtn.addEventListener("click", function () {
+        console.log("Botão do menu clicado!"); // Teste no console
+        menu.classList.toggle("active"); // Abre e fecha o menu no clique
+    });
+
+    // Fecha o menu ao clicar em um link (para telas menores)
+    menuLinks.forEach(link => {
+        link.addEventListener("click", function () {
+            console.log(`Clicou em: ${link.textContent}`); // Teste no console
+            menu.classList.remove("active"); // Fecha ao clicar no link
         });
-    }
+    });
 
     // 🚀 Animação suave no scroll
     const elements = document.querySelectorAll(".fade-in");

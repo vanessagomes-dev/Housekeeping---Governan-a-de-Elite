@@ -1,3 +1,14 @@
+:root {
+    --roxo-escuro: #403081;
+    --roxo-medio: #6a54a3;
+    --roxo-claro: #9677c6;
+    --bege: #cdb192;
+    --lilás: #896d89;
+    --branco: #ffffff;
+    --cinza-claro: #f5f5f5;
+    --preto: #111;
+}
+
 /* Estilos Gerais */
 * {
     margin: 0;
@@ -7,21 +18,22 @@
 }
 
 body {
-    padding-top: 70px;
-    background-color: #f4f4f4;
-    color: #333;
+    padding-top: 80px;
+    background-color: var(--cinza-claro);
+    color: var(--preto);
+    font-family: 'Arial', sans-serif;
 }
-html {
-    display: block;
-}
+
 /* Cabeçalho e Menu */
 header {
-    position: fixed; /* Mantém o menu fixo no topo */
+    position: fixed;
+    /* Mantém o menu fixo no topo */
     top: 0;
     left: 0;
     width: 100%;
-    background: #1a1a1a; /* Cor do menu */
-    padding: 15px 0;
+    background-color: var(--roxo-escuro);
+    color: var(--branco);
+    padding: 15px 20px;
     text-align: center;
     z-index: 1000;
 }
@@ -33,15 +45,15 @@ header {
 }
 
 .menu a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
+    color: var(--branco);
     padding: 10px 15px;
-    transition: all 0.3s ease;
+    text-decoration: none;
+    transition: color 0.3s;
+    ;
 }
 
 .menu a:hover {
-    background: #ff6600;
+    color: var(--bege);
     border-radius: 5px;
 }
 
@@ -107,16 +119,17 @@ header {
     display: inline-block;
     margin-top: 20px;
     padding: 10px 20px;
-    background: gold;
-    color: black;
+    background-color: var(--roxo-medio);
+    color: var(--branco);
     text-decoration: none;
     font-weight: bold;
     border-radius: 5px;
     transition: background 0.3s ease, transform 0.2s ease;
 }
+
 .btn:hover {
-    background: rgba(255, 102, 0, 0.8); 
-    transform: scale(1.05); 
+    background-color: var(--roxo-claro);
+    transform: scale(1.05);
 }
 
 /* Seção Sobre */
@@ -155,29 +168,33 @@ header {
 
 /* redes sociais */
 .redes-sociais {
-    margin-top: 20px; /* Espaçamento entre o texto e os ícones */
+    margin-top: 20px;
+    /* Espaçamento entre o texto e os ícones */
 }
 
 .redes-sociais h3 {
-    margin-bottom: 20px; /* Espaçamento abaixo do título */
+    margin-bottom: 20px;
+    /* Espaçamento abaixo do título */
     font-size: 28px;
 }
 
 .social-icons {
     display: flex;
-    gap: 15px; /* Espaçamento entre os ícones */
+    gap: 15px;
+    /* Espaçamento entre os ícones */
     align-items: center;
 }
 
 .social-icons a {
-    font-size: 28px; /* Tamanho dos ícones */
-    color: #ff6600; 
+    font-size: 28px;
+    /* Tamanho dos ícones */
+    color: #403081;
     transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .social-icons a:hover {
-    color: #cc5200; 
-    transform: scale(1.2); 
+    color: #cdb192;
+    transform: scale(1.2);
 }
 
 /*Cursos*/
@@ -190,150 +207,171 @@ header {
     margin: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    
-    }
-    
-    .col-1, .col-2 {
+
+}
+
+.col-1,
+.col-2 {
     flex: 1;
-    background: #ff6600;
+    background: #6a54a3;
     color: white;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out;
-    }
-    
-    .col-1:hover, .col-2:hover {
+}
+
+.col-1:hover,
+.col-2:hover {
     transform: scale(1.05);
-    }
-    
-    .col-1 ul, .col-2 ul {
+}
+
+.col-1 ul,
+.col-2 ul {
     list-style: none;
     padding: 0;
     text-align: left;
-    }
-    
-    .col-1 h2, .col-2 h2 {
+}
+
+.col-1 h2,
+.col-2 h2 {
     text-align: center;
     margin-bottom: 15px;
-    }
-    
-    @media (max-width: 768px) {
+}
+
+@media (max-width: 768px) {
     .aprendizado {
-    flex-direction: column;
+        flex-direction: column;
     }
-    }
-    
-    /* Cursos */ 
-    .cursos, .curso-info, .video-section {
+}
+
+/* Cursos */
+.cursos,
+.curso-info,
+.video-section {
     text-align: center;
-    padding: 50px 20px;
-    background: white;
+    padding: 30px;
+    background-color: var(--bege);
+    color: var(--preto);
     margin: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-    
-    .card {
-    background: #fff;
+}
+
+.card {
+    background:var(--branco);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-    
-    iframe {
+}
+
+iframe {
     width: 100%;
     max-width: 560px;
     height: 315px;
     margin-top: 20px;
-    }
- 
-    .fade-in {
+}
+
+.fade-in {
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-    }
-    
-    .fade-in.visible {
+}
+
+.fade-in.visible {
     opacity: 1;
     transform: translateY(0);
-    }
-    
-    li {
+}
+
+li {
     list-style: none;
     text-align: justify;
-    }
+}
 
-     /* Ajuste para separar o título das seções */
-     .clip-text-video {
-        margin-bottom: 100px; /* Aumentado para dar mais espaço entre as seções */
-        position: relative;
-        z-index: 1;
-      }
-      
-      video {
-        position: absolute;
-        left: 0px;
-        top: 0px;
-        width: 100vw;
-        height: 30vh;
-        object-fit: cover;
-        overflow: hidden;
-        z-index: 1;
-      }
-      
-      .clip-text-video__text {
-        position: absolute;
-        top: 0;
-        width: 100vw;
-        height: 30vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        color: #fff;
-        overflow: hidden;
-        background: #000;
-        mix-blend-mode: multiply;
-        z-index: 2;
-      }
-      
-      .clip-text-video__text p {
-        font-size: 5vw;
-        line-height: 1;
-        font-weight: 900;
-        font-family: helvetica;
-        z-index: 2;
-       
-      }
-      .aprendizado {
-        position: relative;
-        z-index: 0;
-        padding: 130px 50px; /* Aumentado o padding superior */
-        background: white;
-        margin: 20px 20px; /* Aumentado o margin-top */
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-    .video-section h2 {
-        margin-bottom: 20px; /* Adiciona espaçamento abaixo do título */
-    }
-    
-    .instagram-videos {
-        display: flex;
-        flex-wrap: wrap; /* Permite que os vídeos se ajustem em telas menores */
-        gap: 20px; /* Adiciona espaçamento entre os vídeos */
-        justify-content: center; /* Centraliza os vídeos na tela */
-    }
-    
-    .instagram-media {
-        max-width: 48%; /* Define largura para que caibam dois vídeos lado a lado */
-        min-width: 320px; /* Evita que fiquem muito pequenos */
-    }
+/* Ajuste para separar o título das seções */
+.clip-text-video {
+    position: relative;
+    width: 100%;
+    height: 40vh;
+    /* Definir altura para evitar sobreposição */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+    /* Espaço extra abaixo da seção */
+}
+
+video {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100vw;
+    height: 30vh;
+    object-fit: cover;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.clip-text-video__text {
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+    overflow: hidden;
+    background: #000;
+    mix-blend-mode: multiply;
+    z-index: 2;
+}
+
+.clip-text-video__text p {
+    font-size: 5vw;
+    line-height: 1;
+    font-weight: 900;
+    font-family: helvetica;
+    z-index: 2;
+
+}
+
+.aprendizado {
+    position: relative;
+    z-index: 0;
+    padding: 130px 50px;
+    background-color: var(--bege);
+    margin: 20px 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.video-section h2 {
+    margin-bottom: 20px;
+}
+
+.instagram-videos {
+    display: flex;
+    flex-wrap: wrap;
+    /* Permite que os vídeos se ajustem em telas menores */
+    gap: 20px;
+    justify-content: center;
+}
+
+.instagram-media {
+    max-width: 48%;
+    /* Define largura para que caibam dois vídeos lado a lado */
+    min-width: 320px;
+    /* Evita que fiquem muito pequenos */
+}
+
 /* Fundo chamativo */
 .curso-info {
-    background: linear-gradient(45deg, #ff5733, #ffcc33); /* Gradiente vibrante */
-    color: white; /* Texto branco para contraste */
+    background: linear-gradient(45deg, #403081, #896d89);
+    /* Gradiente vibrante */
+    color: white;
+    /* Texto branco para contraste */
     text-align: center;
     padding: 40px 20px;
     border-radius: 10px;
@@ -347,17 +385,21 @@ header {
     font-weight: bold;
     animation: piscar 1s infinite alternate;
 }
-.curso-info  h3 {
+
+h3.blink {
+    animation: blink 1s infinite;
+    color: var(--roxo-escuro);
+}
+
+.curso-info p {
     color: #000;
 }
-.curso-info p{
-    color: #000;
-}
+
 /* Efeito de pulo no botão */
 .curso-info .btn {
     display: inline-block;
-    background: #ffcc00;
-    color: #000;
+    background: #403081;
+    color: #fff;
     font-size: 1.2rem;
     font-weight: bold;
     padding: 15px 30px;
@@ -369,24 +411,41 @@ header {
     animation: pulo 1s infinite ease-in-out;
 }
 
+.btn-destaque {
+    animation: pulse 1.5s infinite;
+}
+
 /* Animação de piscar */
 @keyframes piscar {
-    0% { opacity: 1; }
-    100% { opacity: 0.4; }
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.4;
+    }
 }
 
 /* Animação de pulo */
 @keyframes pulo {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
 }
 
 /* Destacar o texto importante */
 .curso-info span {
-    color: #ff0;
+    color: #403081;
     font-weight: bold;
     font-size: 1.3rem;
 }
+
 /* 🔹 Estilização da seção de contato */
 .contato {
     display: flex;
@@ -396,12 +455,21 @@ header {
     max-width: 900px;
     margin: 50px auto;
     padding: 20px;
-    background: #f9f9f9;
+    background: var(--branco);
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 
 /* 🔹 Estilizando a parte esquerda (chamada + redes sociais) */
+.contato {
+    margin-top: 80px;
+    /* Aumenta o espaçamento para evitar sobreposição */
+    padding: 50px 20px;
+    background: var(--branco);
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
 .contato .contato-info {
     flex: 1;
     text-align: center;
@@ -430,9 +498,17 @@ header {
 
 /* Animação do botão do WhatsApp */
 @keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.05); }
-    100% { transform: scale(1); }
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
 
 .contato .whatsapp-btn:hover {
@@ -442,21 +518,24 @@ header {
 /* 🔹 Ícones das redes sociais */
 .contato .social-icons {
     display: flex;
-    justify-content: center; /* Centraliza os ícones */
-    margin-top: 30px; /* Aumenta o espaçamento entre o botão e os ícones */
-    gap: 20px; /* Espaço entre os ícones */
+    justify-content: center;
+    /* Centraliza os ícones */
+    margin-top: 30px;
+    /* Aumenta o espaçamento entre o botão e os ícones */
+    gap: 20px;
+    /* Espaço entre os ícones */
 }
 
 
 .contato .social-icons a {
     font-size: 2rem;
     margin: 0 10px;
-    color: #555;
+    color: #403081;
     transition: 0.3s;
 }
 
 .contato .social-icons a:hover {
-    color: #000;
+    color: #cdb192;
 }
 
 /* 🔹 Estilizando a parte direita (formulário) */
@@ -464,15 +543,18 @@ header {
     flex: 1;
     display: flex;
     flex-direction: column;
+    background: var(--branco);
     padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .contato form input,
 .contato form textarea {
     width: 100%;
-    padding: 12px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid var(--lilás);
     border-radius: 5px;
     font-size: 1rem;
 }
@@ -483,8 +565,8 @@ header {
 }
 
 .contato form .btn {
-    background: #ff5733;
-    color: white;
+    background-color: var(--roxo-escuro);
+    color: var(--branco);
     font-size: 1.2rem;
     padding: 12px;
     border: none;
@@ -494,7 +576,25 @@ header {
 }
 
 .contato form .btn:hover {
-    background: #e14b2c;
+    background-color: var(--roxo-medio);
+}
+
+/* Rodape */
+footer {
+    background: var(--roxo-escuro);
+    color: #fff;
+    padding: 10px 0; /* Mantendo a altura reduzida */
+    font-size: 14px;
+    text-align: center; 
+}
+
+
+/* Responsivo: Organiza melhor em telas maiores */
+@media (min-width: 600px) {
+    footer {
+        flex-direction: row;
+        justify-content: space-between;
+    }
 }
 
 /* 🔹 Responsividade */
@@ -508,5 +608,3 @@ header {
         margin-bottom: 20px;
     }
 }
-  
-     
